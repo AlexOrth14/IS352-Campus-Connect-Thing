@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Organization Interest Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+    ></script>
+    <style>
+      /* Custom Wisconsin-inspired theme */
+      :root {
+        --wisconsin-red: #c5050c;
+        --wisconsin-red-dark: #9b0000;
+        --wisconsin-gray: #494949;
+      }
+
+      .hero.is-wisconsin {
+        background-color: var(--wisconsin-red);
+        color: white;
+        padding: 2rem 1.5rem;
+      }
+
+      .hero.is-wisconsin .title,
+      .hero.is-wisconsin .subtitle {
+        color: white;
+      }
+
+      .button.is-wisconsin {
+        background-color: var(--wisconsin-red);
+        color: white;
+        transition: background-color 0.3s;
+      }
+
+      .button.is-wisconsin:hover {
+        background-color: var(--wisconsin-red-dark);
+      }
+
+      .label {
+        color: var(--wisconsin-gray);
+      }
+
+      /* Custom checkbox and radio styling */
+      input[type="checkbox"]:checked,
+      input[type="radio"]:checked {
+        accent-color: var(--wisconsin-red);
+      }
+
+      /* Custom focus states */
+      .input:focus,
+      .textarea:focus,
+      .select select:focus {
+        border-color: var(--wisconsin-red);
+      }
+
+      /* Section styling */
+      .form-section {
+        border-left: 4px solid var(--wisconsin-red);
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero is-wisconsin">
+      <div class="hero-body">
+        <h1 class="title is-2 has-text-centered">
+          Student Organization Interest Form
+        </h1>
+        <p class="subtitle has-text-centered">
+          Connect with student organizations that match your interests!
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <form>
+              <!-- Personal Information -->
+              <div class="form-section">
+                <h2 class="title is-4">Personal Information</h2>
+                <div class="field">
+                  <label class="label">Full Name</label>
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">University Email</label>
+                  <div class="control has-icons-left">
+                    <input
+                      class="input"
+                      type="email"
+                      placeholder="your.email@wisc.edu"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Year of Study</label>
+                  <div class="control">
+                    <div class="select">
+                      <select required>
+                        <option value="">Select year</option>
+                        <option>First Year</option>
+                        <option>Second Year</option>
+                        <option>Third Year</option>
+                        <option>Fourth Year</option>
+                        <option>Graduate Student</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interest Areas -->
+              <div class="form-section">
+                <h2 class="title is-4">Areas of Interest</h2>
+                <div class="field">
+                  <label class="label">Select all that apply</label>
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" />
+                      Academic & Professional
+                    </label>
+                  </div>
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" />
+                      Arts & Culture
+                    </label>
+                  </div>
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" />
+                      Community Service
+                    </label>
+                  </div>
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" />
+                      Environmental
+                    </label>
+                  </div>
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" />
+                      Sports & Recreation
+                    </label>
+                  </div>
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" />
+                      Technology
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Availability -->
+              <div class="form-section">
+                <h2 class="title is-4">Availability</h2>
+                <div class="field">
+                  <label class="label">Preferred Meeting Times</label>
+                  <div class="control">
+                    <label class="radio">
+                      <input type="radio" name="meeting-time" />
+                      Weekday Mornings
+                    </label>
+                    <br />
+                    <label class="radio">
+                      <input type="radio" name="meeting-time" />
+                      Weekday Afternoons
+                    </label>
+                    <br />
+                    <label class="radio">
+                      <input type="radio" name="meeting-time" />
+                      Weekday Evenings
+                    </label>
+                    <br />
+                    <label class="radio">
+                      <input type="radio" name="meeting-time" />
+                      Weekends
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional Information -->
+              <div class="form-section">
+                <h2 class="title is-4">Additional Information</h2>
+                <div class="field">
+                  <label class="label">Tell us more about your interests</label>
+                  <div class="control">
+                    <textarea
+                      class="textarea"
+                      placeholder="Share any specific interests, skills, or experiences you'd like us to know about..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="field">
+                <div class="control">
+                  <button class="button is-wisconsin is-fullwidth">
+                    Submit Interest Form
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
